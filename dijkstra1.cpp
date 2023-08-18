@@ -125,15 +125,20 @@ void showPath(int *finalPath, int srcIdx, int destIdx, struct node pos[]) {
     }
     printf("\n");
 
-    //setfillstyle(SOLID_FILL,WHITE);
-    //setcolor(RED);
-    //circle(pos[srcIdx].coord1, pos[srcIdx].coord2, 10);
-    //floodfill(pos[src],coord1, pos[src].coord2, RED);
+    setfillstyle(SOLID_FILL,GREEN);
+    setcolor(GREEN);
+    circle(pos[srcIdx].coord1, pos[srcIdx].coord2, 10);
+    floodfill(pos[srcIdx].coord1, pos[srcIdx].coord2, GREEN);
+
+    setfillstyle(SOLID_FILL,RED);
+    setcolor(RED);
+    circle(pos[destIdx].coord1, pos[destIdx].coord2, 10);
+    floodfill(pos[destIdx].coord1, pos[destIdx].coord2, RED);
 
     //setcolor(GREEN);
     //circle(pos[destIdx].coord1, pos[destIdx].coord2, 10);
 
-    setcolor(CYAN);
+    setcolor(YELLOW);
     for(int i = 0; finalPath[i+1] != -1; ++i) {
         line(pos[finalPath[i]].coord1, pos[finalPath[i]].coord2, pos[finalPath[i + 1]].coord1, pos[finalPath[i + 1]].coord2);
 
