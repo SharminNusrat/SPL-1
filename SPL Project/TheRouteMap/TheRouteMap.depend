@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1697565038 source:c:\users\asus\onedrive\desktop\gittutorials\spl project\theroutemap\dijkstra.cpp
+	"header.h"
+
+1699504520 c:\users\asus\onedrive\desktop\gittutorials\spl project\theroutemap\header.h
+	<bits/stdc++.h>
+	<graphics.h>
+
+1699504505 source:c:\users\asus\onedrive\desktop\gittutorials\spl project\theroutemap\main.cpp
+	"header.h"
+
+1696942522 source:c:\users\asus\onedrive\desktop\gittutorials\spl project\theroutemap\dfsfindallpath.cpp
+	"header.h"
+
+1699418337 source:c:\users\asus\onedrive\desktop\gittutorials\spl project\theroutemap\displaymap.cpp
+	"header.h"
+	<bits/stdc++.h>
+	<graphics.h>
+
+1696944173 source:c:\users\asus\onedrive\desktop\gittutorials\spl project\theroutemap\primsoptimalcost.cpp
+	"header.h"
+
+1699521599 source:c:\users\asus\onedrive\desktop\gittutorials\spl project\theroutemap\moga_tsp.cpp
+	"header.h"
+	<bits/stdc++.h>
+	<vector>
+	<random>
+	<windows.h>
+
