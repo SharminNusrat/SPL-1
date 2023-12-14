@@ -3,7 +3,7 @@
 #include <bits/stdc++.h>
 #include <vector>
 #include <random>
-#include<windows.h>
+#include <windows.h>
 
 using namespace std;
 #define INT_MAX 5000000
@@ -33,20 +33,20 @@ vector<vector<int> > time_matrix = {{INT_MAX, INT_MAX, 15, 25, INT_MAX},
                                      {INT_MAX, 30, INT_MAX, INT_MAX, INT_MAX}};
 
 
-/*vector<vector<int>> distance_matrix = {{INT_MAX,390,INT_MAX,160,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX},
-                                    {390,INT_MAX,INT_MAX,INT_MAX,INT_MAX,520,INT_MAX,INT_MAX,INT_MAX,INT_MAX,650,INT_MAX,INT_MAX,INT_MAX},
-                                    {INT_MAX,INT_MAX,INT_MAX,1400,INT_MAX,INT_MAX,INT_MAX,1300,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX},
-                                    {160,INT_MAX,1400,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX},
-                                    {INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,900,600,INT_MAX,INT_MAX},
-                                    {INT_MAX,520,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,670,INT_MAX,INT_MAX,INT_MAX},
-                                    {INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,1300,750,INT_MAX,1500,INT_MAX,INT_MAX,350},
-                                    {INT_MAX,INT_MAX,1300,INT_MAX,INT_MAX,INT_MAX,1300,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX},
-                                    {INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,750,INT_MAX,INT_MAX,INT_MAX,500,INT_MAX,INT_MAX,INT_MAX},
-                                    {INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,1100,INT_MAX,1200,INT_MAX},
-                                    {INT_MAX,390,INT_MAX,INT_MAX,900,670,1500,INT_MAX,500,1100,INT_MAX,270,450,INT_MAX},
-                                    {INT_MAX,INT_MAX,INT_MAX,INT_MAX,600,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,270,INT_MAX,INT_MAX,INT_MAX},
-                                    {INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,1200,450,INT_MAX,INT_MAX,INT_MAX},
-                                    {INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,350,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX}};
+/*vector<vector<int>> distance_matrix = {{INT_MAX,12,INT_MAX,5,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX},
+                                    {12,INT_MAX,INT_MAX,INT_MAX,INT_MAX,11,INT_MAX,INT_MAX,INT_MAX,INT_MAX,1,INT_MAX,INT_MAX,INT_MAX},
+                                    {INT_MAX,INT_MAX,INT_MAX,6,INT_MAX,INT_MAX,INT_MAX,4,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX},
+                                    {5,INT_MAX,6,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX},
+                                    {INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,23,3,INT_MAX,INT_MAX},
+                                    {INT_MAX,11,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,19,INT_MAX,INT_MAX,INT_MAX},
+                                    {INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,15,10,INT_MAX,14,INT_MAX,INT_MAX,16},
+                                    {INT_MAX,INT_MAX,4,INT_MAX,INT_MAX,INT_MAX,15,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX},
+                                    {INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,10,INT_MAX,INT_MAX,INT_MAX,8,INT_MAX,INT_MAX,INT_MAX},
+                                    {INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,25,INT_MAX,29,INT_MAX},
+                                    {INT_MAX,1,INT_MAX,INT_MAX,23,19,14,INT_MAX,8,25,INT_MAX,17,20,INT_MAX},
+                                    {INT_MAX,INT_MAX,INT_MAX,INT_MAX,3,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,17,INT_MAX,INT_MAX,INT_MAX},
+                                    {INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,29,20,INT_MAX,INT_MAX,INT_MAX},
+                                    {INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,16,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX}};
 
 vector<vector<int>> time_matrix = {{INT_MAX,12,INT_MAX,5,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX},
                                     {12,INT_MAX,INT_MAX,INT_MAX,INT_MAX,11,INT_MAX,INT_MAX,INT_MAX,INT_MAX,1,INT_MAX,INT_MAX,INT_MAX},
@@ -156,9 +156,10 @@ Chromosome generateRandomChromosome(int num_cities) {
 }
 
 
-double evaluateFitness(Chromosome chromosome) {
+double evaluateFitness(Chromosome chromosome, double dist_wt, double time_wt) {
 
-  double fitness = 0.8*chromosome.distance + 0.2*chromosome.time;
+
+  double fitness = dist_wt*chromosome.distance + time_wt*chromosome.time;
   return fitness;
 }
 
@@ -232,6 +233,12 @@ int MOGA(char places[][50]) {
   int population_size = 1000;
   int num_generations = 10000;
 
+  double dist_wt, time_wt;
+  cout << "Enter weight for distance: ";
+  cin >> dist_wt;
+  cout << "Enter weight for time: ";
+  cin >> time_wt;
+
   normalize();
 
   vector<Chromosome> chromosomes;
@@ -253,7 +260,7 @@ int MOGA(char places[][50]) {
   for (int i = 0; i < num_generations; i++) {
 
     for (int j = 0; j < population_size; j++) {
-      chromosomes[j].fitness = evaluateFitness(chromosomes[j]);
+      chromosomes[j].fitness = evaluateFitness(chromosomes[j], dist_wt, time_wt);
     }
 
 
