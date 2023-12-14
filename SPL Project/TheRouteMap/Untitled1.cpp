@@ -1,4 +1,4 @@
-#include "header.h"
+/*#include "header.h"
 #define MAX_VERTICES 100
 
 using namespace std;
@@ -6,7 +6,7 @@ using namespace std;
 /*struct node {
     int coord1;
     int coord2;
-};*/
+};
 
 int rel_matrix[MAX_VERTICES][MAX_VERTICES] = {0};
 
@@ -32,13 +32,13 @@ void build_rel_matrix() {
     rel_matrix[8][6] = 750;
 
     /*rel_matrix[2][6] = 7;
-    rel_matrix[6][2] = 7;*/
+    rel_matrix[6][2] = 7;
 
     rel_matrix[1][5] = 520;
     rel_matrix[5][1] = 520;
 
     /*rel_matrix[2][1] = 2;
-    rel_matrix[1][2] = 2;*/
+    rel_matrix[1][2] = 2;
 
     rel_matrix[6][10] = 1500;
     rel_matrix[10][6] = 1500;
@@ -154,3 +154,4 @@ int main (void) {
     return 0;
 }
 
+*/

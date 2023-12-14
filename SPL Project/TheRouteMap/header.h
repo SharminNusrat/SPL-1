@@ -21,6 +21,6 @@ void userInputDFS(struct node pos[], char places[][50], int rel_matrix[][100]);
 void dfsFindAllPaths(struct node pos[], int srcIdx, int destIdx, int visited[], int path[], int pathIdx, char places[][50]);
 void userInputPrims(struct node pos[], char places[][50], int rel_matrix[][100]);
 int MOGA(char places[][50]);
-
+void displayGraph1();
 
 #endif

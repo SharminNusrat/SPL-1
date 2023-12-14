@@ -9,9 +9,6 @@ int path[MAX_VERTICES];
 
 
 
-
-
-
 void dfsFindAllPaths(int rel_matrix[][100], struct node pos[], int srcIdx, int destIdx, int visited[], int path[], int pathIdx, char places[][50]) {
 
     int numNodes = 14;

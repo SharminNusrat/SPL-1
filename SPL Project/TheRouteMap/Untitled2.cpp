@@ -115,24 +115,20 @@ int main (void) {
         scanf("%d",&choice);
         getchar();
 
-
+        displayGraph(rel_matrix, pos, numVertices);
 
 
         switch(choice) {
             case 1:
-                displayGraph(rel_matrix, pos, numVertices);
                 userInputDijkstra(pos, places, rel_matrix);
                 break;
             case 2:
-                displayGraph(rel_matrix, pos, numVertices);
                 userInputDFS(pos, places, rel_matrix);
                 break;
             case 3:
-                displayGraph(rel_matrix, pos, numVertices);
                 userInputPrims(pos, places, rel_matrix);
                 break;
             case 4:
-                displayGraph1();
                 MOGA(places);
                 break;
             case 5:
