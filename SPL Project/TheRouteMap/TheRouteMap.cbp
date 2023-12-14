@@ -38,6 +38,7 @@
 		<Unit filename="dfsFindAllPath.cpp" />
 		<Unit filename="dijkstra.cpp" />
 		<Unit filename="displayMap.cpp" />
+		<Unit filename="displayMap2.cpp" />
 		<Unit filename="header.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="primsOptimalCost.cpp" />

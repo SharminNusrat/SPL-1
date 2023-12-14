@@ -2,10 +2,7 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="MOGA_TSP.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="11024" topLine="245" />
-	</File>
-	<File name="Untitled2.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="2550" topLine="104" />
+		<Cursor1 position="11024" topLine="14" />
 	</File>
 	<File name="dfsFindAllPath.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor1 position="496" topLine="0" />
@@ -14,13 +11,16 @@
 		<Cursor1 position="168" topLine="75" />
 	</File>
 	<File name="displayMap.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="4154" topLine="124" />
+		<Cursor1 position="3233" topLine="120" />
+	</File>
+	<File name="displayMap2.cpp" open="1" top="1" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor1 position="930" topLine="0" />
 	</File>
 	<File name="header.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="956" topLine="0" />
+		<Cursor1 position="982" topLine="0" />
 	</File>
-	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor1 position="754" topLine="84" />
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor1 position="3428" topLine="0" />
 	</File>
 	<File name="primsOptimalCost.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor1 position="3419" topLine="158" />
